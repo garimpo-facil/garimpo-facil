@@ -88,8 +88,25 @@ body, html {
 
   .menu-btn {
     width: 90%;
-    height: 30vh;
+    height: 40vh;
     font-size: 2rem;
+  }
+
+  /* ===== Centralizar os produtos no celular ===== */
+  .produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    justify-items: center; /* garante que as divs fiquem centralizadas na grid */
+  }
+}
+@media (max-width: 768px) {
+  .produtos-container {
+    grid-template-columns: 1fr;
+    justify-items: center; /* força centralização no celular */
   }
 }
 
